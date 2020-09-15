@@ -15,12 +15,32 @@
 
 """
 
-def main():
+def in_str (first_string, second_string):
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
     
-if __name__ == "__main__":
-    main()
+    from collections import Counter
+    a = first_string
+    b = second_string
+    if not (type(a) == str and type(b) == str):
+        return '0'
+    elif (Counter(a) == Counter(b)):
+        return '1'
+    elif len(a) > len(b):
+        return '2'
+    elif (Counter(a) != Counter(b) and 'learn' in b.lower()):
+        return '3'
+    else:
+        return 'True'
+        
+
+print(in_str(11, 211))
+print(in_str("abc", 'abc'))
+print(in_str('one two three', 'one two'))
+print(in_str('one', 'learn'))
+print(in_str('11', '211'))
+    
+if __name__ == "__in_str__":
+    in_str()

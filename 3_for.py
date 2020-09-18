@@ -25,10 +25,24 @@ def get_mean(mark_list):
     return(score_s)
     
 if __name__ == "__main__":
-  for class_dict in school:
+  mean_list = [] #способ_1
+
+for class_dict in school:
     class_mean = get_mean(class_dict['scores'])
     class_name = class_dict['school_class']
-    print(class_name, class_mean)
+    mean_list.append(class_mean) #способ_1
+    print(f"Средняя оценка класса: {class_name} - {class_mean}")
+    print(mean_list) #способ_1 выводит что лежит в списке, необязательная строка
 
-  school_mean = [school[0]['scores'], school[1]['scores'], school[2]['scores']]
-  print(sum([x[1] for x in school_mean])/len(school_mean))
+sum_school = get_mean(mean_list) #способ_1
+print(sum_school) #способ_1
+
+global_sum = 0 #способ_2
+len_sum = 0 #способ_2
+
+for class_dict in school: #способ_2
+    global_sum += sum(class_dict['scores'])
+    len_sum += len(class_dict['scores'])
+
+print(f"Средняя оценка школы: {global_sum/len_sum}") #способ_2
+

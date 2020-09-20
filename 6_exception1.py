@@ -10,11 +10,20 @@
     
 """
 
-def hello_user():
-    """
-    Замените pass на ваш код
-    """
-    pass
-    
+def greeting ():
+    while True:
+        try:
+            hello_user = input('Как дела?: ')
+        except KeyboardInterrupt:
+            print('Пока')
+        if hello_user == 'Хорошо':
+            print('Супер')
+            break
+        else:
+            print('А почему {}?'.format(hello_user))
+
 if __name__ == "__main__":
-    hello_user()
+    check_def = greeting()
+    print (check_def)
+
+

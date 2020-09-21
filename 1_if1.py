@@ -32,11 +32,9 @@ def user_age(age):
     else:
         return 'Лафа закончилась, пора начать себя обеспечивать, пиши резюме и GO работать'
 
-p = user_age(age)
-print(p)
-
-if __name__ == "__user_age__":
-    user_age()
+if __name__ == "__main__":
+    p = user_age(age)
+    print(p)
 
 
 # print(user_age(5))

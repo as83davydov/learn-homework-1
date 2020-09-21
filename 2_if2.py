@@ -36,11 +36,10 @@ def in_str (first_string, second_string):
         return 'True'
         
 
-print(in_str(11, 211))
-print(in_str("abc", 'abc'))
-print(in_str('one two three', 'one two'))
-print(in_str('one', 'learn'))
-print(in_str('11', '211'))
-    
-if __name__ == "__in_str__":
-    in_str()
+ 
+if __name__ == "__main__":
+    print(in_str(11, 211))
+    print(in_str("abc", 'abc'))
+    print(in_str('one two three', 'one two'))
+    print(in_str('one', 'Learn'))
+    print(in_str('11', '211'))
